@@ -1,24 +1,14 @@
-#ifndef HEADER_VM_CPU
-#define HEADER_VM_CPU
-
-#include <stdint.h>
-
-#define NO_OF_REGISTERS 5
-
-
-struct vm_cpuS
-{
-	uint32_t registers[NO_OF_REGISTERS];
-	
-	uint32_t stack[255];
-	
-	uint8_t sp;
-	
-	uint32_t pc;
-};
-
-
-void initialize_vm_cpuS(vm_cpuS* cpuPtr);
-void execute_program(vm_cpuS* cpuPtr, const char* program);
-
-#endif
+#define NOP      0x0
+#define PUSH     0x1
+#define POP      0x2
+#define STORE    0x3
+#define LOAD     0x4
+#define ADD      0x5
+#define SUB      0x6
+#define MUL      0x7
+#define DIV      0x8
+#define JMP      0x9
+#define JZ       0x10
+#define JNZ      0x11
+#define PRINT    0xef
+#define END_EXEC 0xff
