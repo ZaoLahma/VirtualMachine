@@ -18,7 +18,7 @@ struct vm_cpuS
 };
 
 
-void initialize_vm_cpuS(vm_cpuS* cpuPtr);
-void execute_program(vm_cpuS* cpuPtr, const char* program);
+void initialize_vm_cpuS(struct vm_cpuS* cpuPtr);
+void execute_program(struct vm_cpuS* cpuPtr, const char* program);
 
 #endif

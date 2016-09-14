@@ -1,11 +1,11 @@
-#include "./cpu.h"
+#include "../inc/cpu.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "./instr_set.h"
+#include "../inc/instr_set.h"
 
 int main(void)
 {	
-	vm_cpuS* cpuPtr = (vm_cpuS*) malloc(sizeof(vm_cpuS));
+	struct vm_cpuS* cpuPtr = (struct vm_cpuS*) malloc(sizeof(struct vm_cpuS));
 	
 	initialize_vm_cpuS(cpuPtr);
 	

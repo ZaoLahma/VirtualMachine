@@ -1,15 +1,15 @@
-#include "./cpu.h"
+#include "../inc/cpu.h"
 #include <string.h>
 #include <stdio.h>
-#include "./instr_set.h"
+#include "../inc/instr_set.h"
 
 
-void print_instruction(const uint8_t instruction, const vm_cpuS* cpuPtr, const char* program);
+void print_instruction(const uint8_t instruction, const struct vm_cpuS* cpuPtr, const char* program);
 void abort_exec(const char* str);
-void pop_stack(vm_cpuS* cpuPtr);
-void push_stack(vm_cpuS* cpuPtr);
+void pop_stack(struct vm_cpuS* cpuPtr);
+void push_stack(struct vm_cpuS* cpuPtr);
 
-void initialize_vm_cpuS(vm_cpuS* cpu)
+void initialize_vm_cpuS(struct vm_cpuS* cpu)
 {
 	printf("VM booting. Initializing CPU\n");
 	
@@ -21,11 +21,11 @@ void initialize_vm_cpuS(vm_cpuS* cpu)
 }
 
 
-void execute_program(vm_cpuS* cpuPtr, const char* program)
+void execute_program(struct vm_cpuS* cpuPtr, const char* program)
 {
 	printf("VM executing program\n");
 	
-	bool executeFinished = false;
+	uint8_t executeFinished = 0;
 	
 	char expectedBytePattern[] = {0xff, 0xfe, 0xf1, 0xf0};
 	
@@ -123,7 +123,7 @@ void execute_program(vm_cpuS* cpuPtr, const char* program)
 			break;
 			
 			case END_EXEC:
-				executeFinished = true;
+				executeFinished = 1;
 			break;
 				
 			default:
@@ -133,7 +133,7 @@ void execute_program(vm_cpuS* cpuPtr, const char* program)
 	}
 }
 
-void pop_stack(vm_cpuS* cpuPtr)
+void pop_stack(struct vm_cpuS* cpuPtr)
 {
 	if((uint8_t)cpuPtr->sp < (uint8_t)255)
 	{
@@ -145,7 +145,7 @@ void pop_stack(vm_cpuS* cpuPtr)
 	}
 }
 
-void push_stack(vm_cpuS* cpuPtr)
+void push_stack(struct vm_cpuS* cpuPtr)
 {
 	if(cpuPtr->sp > 0)
 	{
@@ -165,7 +165,7 @@ void abort_exec(const char* str)
 	*crashPoint = 0;
 }
 
-void print_instruction(const uint8_t instruction, const vm_cpuS* cpuPtr, const char* program)
+void print_instruction(const uint8_t instruction, const struct vm_cpuS* cpuPtr, const char* program)
 {
 	switch(instruction)
 	{
