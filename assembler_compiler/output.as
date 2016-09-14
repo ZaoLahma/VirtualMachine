@@ -1,0 +1,1 @@
+ÿþñðlabel1 PUSH 15 STORE 1 JMP hej label2 PUSH 134 ADD 4
