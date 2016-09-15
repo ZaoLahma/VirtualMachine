@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1426707588 source:/home/janne/Repo/GitRepository/c++/VirtualMachine/FileReader.c
+	"./FileReader.h"
+	<stdio.h>
+
+1426708185 /home/janne/Repo/GitRepository/c++/VirtualMachine/FileReader.h
+
+1427391428 source:/home/janne/Repo/GitRepository/c++/VirtualMachine/Assembler_c++/assembler.cpp
+
+1427392130 source:/home/janne/Repo/GitRepository/c++/VirtualMachine/Assembler_c++/main.cpp
+	<iostream>
+	"./assembler.h"
+	"../FileReader.h"
+
+1427391428 /home/janne/Repo/GitRepository/c++/VirtualMachine/Assembler_c++/assembler.h
+

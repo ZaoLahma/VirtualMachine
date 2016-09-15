@@ -1,0 +1,296 @@
+Hello world!
+Loaded 126 bytes into buf at address: 0x1171010
+Adding string:  
+Adding string:   
+Adding string:   p
+Adding string:   pu
+Adding string:   pus
+Adding string:   push
+Adding string:   push 
+Adding string:   push 1
+Adding string:   push 10
+Adding string:   push 10 
+Adding string:  
+Adding string:   
+Adding string:   s
+Adding string:   st
+Adding string:   sto
+Adding string:   stor
+Adding string:   store
+Adding string:   store 
+Adding string:   store 0
+Adding string: 1
+Adding string: 1 
+Adding string: 1 l
+Adding string: 1 lo
+Adding string: 1 loa
+Adding string: 1 load
+Adding string: 1 load 
+Adding string: 1 load 0
+Adding string:  
+Adding string:   
+Adding string:   j
+Adding string:   jz
+Adding string:   jz 
+Adding string:   jz 2
+Adding string:  
+Adding string:   
+Adding string:   l
+Adding string:   lo
+Adding string:   loa
+Adding string:   load
+Adding string:   load 
+Adding string:   load 0
+Adding string:  
+Adding string:   
+Adding string:   p
+Adding string:   pu
+Adding string:   pus
+Adding string:   push
+Adding string:   push 
+Adding string:   push 1
+Adding string:  
+Adding string:   
+Adding string:   s
+Adding string:   su
+Adding string:   sub
+Adding string:  
+Adding string:   
+Adding string:   s
+Adding string:   st
+Adding string:   sto
+Adding string:   stor
+Adding string:   store
+Adding string:   store 
+Adding string:   store 0
+Adding string:  
+Adding string:   
+Adding string:   l
+Adding string:   lo
+Adding string:   loa
+Adding string:   load
+Adding string:   load 
+Adding string:   load 0
+Adding string:  
+Adding string:   
+Adding string:   p
+Adding string:   pr
+Adding string:   pri
+Adding string:   prin
+Adding string:   print
+Adding string:  
+Adding string:   
+Adding string:   j
+Adding string:   jm
+Adding string:   jmp
+Adding string:   jmp 
+Adding string:   jmp 1
+Adding string: 2
+Adding string: 2 
+Adding string: 2 s
+Adding string: 2 st
+Adding string: 2 sto
+Adding string: 2 stop
+Trimmed: push 10
+Trimmed: store 0
+Trimmed: 1 load 0
+Trimmed: jz 2
+Trimmed: load 0
+Trimmed: push 1
+Trimmed: sub
+Trimmed: store 0
+Trimmed: load 0
+Trimmed: print
+Trimmed: jmp 1
+Trimmed: 2 stop
+str: push 10
+Number of spaces: 1
+Instruction: push
+argumentString: push 10
+Returning address: 0
+str: store 0
+Number of spaces: 1
+Instruction: store
+argumentString: store 0
+instruction: 1 size: 2
+Returning address: 2
+Is integer. Label: 1
+str: 1 load 0
+Number of spaces: 2
+label: 1
+instructionStr: load 0
+instructionStr: load
+Instruction: load
+argumentString: 1 load 0
+instruction: 1 size: 2
+instruction: 4 size: 2
+Returning address: 4
+str: jz 2
+Number of spaces: 1
+Instruction: jz
+argumentString: jz 2
+instruction: 1 size: 2
+instruction: 4 size: 2
+instruction: 3 size: 2
+Returning address: 6
+str: load 0
+Number of spaces: 1
+Instruction: load
+argumentString: load 0
+instruction: 1 size: 2
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 6 size: 3
+Returning address: 9
+str: push 1
+Number of spaces: 1
+Instruction: push
+argumentString: push 1
+instruction: 1 size: 2
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 6 size: 3
+instruction: 3 size: 2
+Returning address: 11
+str: sub
+Number of spaces: 0
+Instruction: sub
+argumentString: sub
+No arguments
+instruction: 1 size: 2
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 6 size: 3
+instruction: 3 size: 2
+instruction: 1 size: 2
+Returning address: 13
+str: store 0
+Number of spaces: 1
+Instruction: store
+argumentString: store 0
+instruction: 1 size: 2
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 6 size: 3
+instruction: 3 size: 2
+instruction: 1 size: 2
+instruction: 9 size: 1
+Returning address: 14
+str: load 0
+Number of spaces: 1
+Instruction: load
+argumentString: load 0
+instruction: 1 size: 2
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 6 size: 3
+instruction: 3 size: 2
+instruction: 1 size: 2
+instruction: 9 size: 1
+instruction: 4 size: 2
+Returning address: 16
+str: print
+Number of spaces: 0
+Instruction: print
+argumentString: print
+No arguments
+instruction: 1 size: 2
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 6 size: 3
+instruction: 3 size: 2
+instruction: 1 size: 2
+instruction: 9 size: 1
+instruction: 4 size: 2
+instruction: 3 size: 2
+Returning address: 18
+str: jmp 1
+Number of spaces: 1
+Instruction: jmp
+argumentString: jmp 1
+instruction: 1 size: 2
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 6 size: 3
+instruction: 3 size: 2
+instruction: 1 size: 2
+instruction: 9 size: 1
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 12 size: 1
+Returning address: 19
+Is integer. Label: 2
+str: 2 stop
+Number of spaces: 1
+label: 2
+instructionStr: stop
+instructionStr: stop
+Instruction: stop
+argumentString: 2 stop
+No arguments
+instruction: 1 size: 2
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 6 size: 3
+instruction: 3 size: 2
+instruction: 1 size: 2
+instruction: 9 size: 1
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 12 size: 1
+instruction: 5 size: 3
+Returning address: 22
+Converting labels to addresses. instructionsVector.size(): 12
+Giving address 22
+Giving address 4
+instruction: 1 size: 2
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 6 size: 3
+instruction: 3 size: 2
+instruction: 1 size: 2
+instruction: 9 size: 1
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 12 size: 1
+instruction: 5 size: 3
+instruction: 13 size: 0
+Returning address: 22
+instruction: 1 size: 2
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 6 size: 3
+instruction: 3 size: 2
+instruction: 1 size: 2
+instruction: 9 size: 1
+instruction: 4 size: 2
+instruction: 3 size: 2
+instruction: 12 size: 1
+instruction: 5 size: 3
+instruction: 13 size: 0
+Returning address: 22
+Building outFileBuf of size: 22
+Processing instruction: 1
+outFileBufIndex: 2
+Processing instruction: 4
+outFileBufIndex: 4
+Processing instruction: 3
+outFileBufIndex: 6
+Processing instruction: 6
+outFileBufIndex: 9
+Processing instruction: 3
+outFileBufIndex: 11
+Processing instruction: 1
+outFileBufIndex: 13
+Processing instruction: 9
+outFileBufIndex: 14
+Processing instruction: 4
+outFileBufIndex: 16
+Processing instruction: 3
+outFileBufIndex: 18
+Processing instruction: 12
+outFileBufIndex: 19
+Processing instruction: 5
+outFileBufIndex: 22
+Processing instruction: 13
+outFileBufIndex: 23

@@ -1,0 +1,21 @@
+  push 1000 # Iterate 1000 times
+  store 0
+
+
+
+lbl_1 load 0
+      jnz lbl_3
+
+lbl_4 load 0
+       jz lbl_2
+       load 0
+       push 10
+       sub
+       store 0
+       load 0
+       print
+       jmp lbl_1
+
+lbl_2 stop
+
+lbl_3 jmp lbl_4
