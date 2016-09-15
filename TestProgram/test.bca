@@ -9,7 +9,7 @@ lbl_1 load 0
 lbl_4 load 0
        jz lbl_2
        load 0
-       push 10
+       push 1
        sub
        store 0
        load 0

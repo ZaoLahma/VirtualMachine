@@ -112,7 +112,7 @@ void popStack(struct CPU* cpuPtr)
     else
     {
         printf("ERROR: Stack underflow. Crashing.");
-        char* crash = NULL;
+        char* crash = 0;
         *crash = 5;
     }
 }
@@ -126,7 +126,7 @@ void pushStack(struct CPU* cpuPtr)
     else
     {
         printf("ERROR: Stack overflow. Crashing.");
-        char* crash = NULL;
+        char* crash = 0;
         *crash = 5;
     }
 }
@@ -181,7 +181,7 @@ void execute_program(struct CPU* cpuPtr, unsigned int debug)
                     printf("LOAD \n");
                 }
                 pushStack(cpuPtr);
-                cpuPtr->stackMem[cpuPtr->sp] = cpuPtr->registers[*(cpuPtr->pc + 1)];
+                cpuPtr->stackMem[cpuPtr->sp] = cpuPtr->registers[(int)*(cpuPtr->pc + 1)];
                 cpuPtr->pc+=2;
                 break;
             case STORE:
@@ -190,7 +190,7 @@ void execute_program(struct CPU* cpuPtr, unsigned int debug)
                     printf("STORE ");
                     printf("%u: %u\n", *(cpuPtr->pc + 1), cpuPtr->stackMem[cpuPtr->sp]);
                 }
-                cpuPtr->registers[*(cpuPtr->pc + 1)] = cpuPtr->stackMem[cpuPtr->sp];
+                cpuPtr->registers[(int)*(cpuPtr->pc + 1)] = cpuPtr->stackMem[cpuPtr->sp];
                 popStack(cpuPtr);
                 cpuPtr->pc+=2;
                 break;

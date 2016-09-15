@@ -1,6 +1,7 @@
 #ifndef VM_CPU_H_INCLUDED
 #define VM_CPU_H_INCLUDED
 #include <stdint.h>
+
 struct CPU
 {
     unsigned int registers[16];
@@ -8,7 +9,7 @@ struct CPU
     unsigned int stackMem[256];
 
     unsigned int sp;
-    unsigned char* pc;
+    char* pc;
 
     char RAM[65536];
 };
