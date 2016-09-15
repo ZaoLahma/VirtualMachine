@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "./assembler.h"
-#include "../FileReader.h"
+#include "../inc/FileReader.h"
 
 using namespace std;
 
@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 
     writeFile(outFileName.c_str(), outFileBuf, outFileBufSize);
 
-    delete fileBuf;
+    delete[] fileBuf;
 
     delete outFileBuf;
 

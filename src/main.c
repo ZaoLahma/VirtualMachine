@@ -1,46 +1,38 @@
-#include "../inc/cpu.h"
-#include <stdlib.h>
 #include <stdio.h>
-#include "../inc/instr_set.h"
+#include <stdlib.h>
+#include <string.h>
+#include "./FileReader.h"
 
-int main(void)
-{	
-	struct vm_cpuS* cpuPtr = (struct vm_cpuS*) malloc(sizeof(struct vm_cpuS));
-	
-	initialize_vm_cpuS(cpuPtr);
-	
-	char program[] = {0xff, 0xfe, 0xf1, 0xf0,
-					  PUSH, 0xf1, 0xef, 0x1, 0x2,
-					  STORE, 0x0,
-					  PUSH, 0xff, 0xff, 0xff, 0xff,
-					  POP,
-					  LOAD, 0x0,
-					  POP,
-					  PUSH, 0x0, 0x0, 0x0, 0x1,
-					  PUSH, 0x0, 0x0, 0x0, 0x2,
-					  ADD,
-					  PRINT,
-					  POP,
-					  PUSH, 0x0, 0x0, 0x0, 0x3,
-					  PUSH, 0x0, 0x0, 0x0, 0x2,					  
-					  SUB,
-					  PRINT,
-					  POP,
-					  PUSH, 0x0, 0x0, 0x0, 0x4,
-					  PUSH, 0x0, 0x0, 0x0, 0x2,					  
-					  MUL,
-					  PRINT,
-					  POP,
-					  PUSH, 0x0, 0x0, 0x0, 0x4,
-					  PUSH, 0x0, 0x0, 0x0, 0x2,					  
-					  DIV,
-					  PRINT,					  					  
-					  END_EXEC
-					  };
-	
-	execute_program(cpuPtr, program);
-	
-	free(cpuPtr);
-	
-	return 0;
+#include "./VM_CPU.h"
+
+int main(int argc, char **argv)
+{
+    printf("Hello world!\n");
+
+    unsigned int debug = 0;
+
+    if(argc == 3)
+    {
+        printf("argv[2]: %s\n", argv[2]);
+
+        if(strcmp(argv[2], "debug") == 0)
+        {
+            printf("DEBUG\n");
+            debug = 1;
+        }
+    }
+
+    struct CPU cpu;
+
+    readFile(argv[1], &cpu.RAM[0]);
+
+    init_cpu(&cpu);
+
+   // disassemble_program(&cpu);
+
+    //reset_cpu(&cpu);
+
+    execute_program(&cpu, debug);
+
+    return 0;
 }

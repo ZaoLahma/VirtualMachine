@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <string.h>
 #include <stdio.h>
-#include "../InstructionSet.h"
+#include "../inc/InstructionSet.h"
 
 Assembler::Assembler(const char* fileBuf, const unsigned int fileSize) :
 outFileBufSize(0),

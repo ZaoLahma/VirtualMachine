@@ -1,4 +1,4 @@
-#include "./FileReader.h"
+#include "../inc/FileReader.h"
 #include <stdio.h>
 
 unsigned int readFile(const char* fileName, char* buf)

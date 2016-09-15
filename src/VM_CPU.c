@@ -1,5 +1,5 @@
-#include "./VM_CPU.h"
-#include "./InstructionSet.h"
+#include "../inc/VM_CPU.h"
+#include "../inc/InstructionSet.h"
 
 #include <stdint.h>
 #include <stdio.h>
